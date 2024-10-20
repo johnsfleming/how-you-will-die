@@ -33,11 +33,21 @@
                 const maxFloored = Math.floor(max);
                 return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
             }
-        
 
             function loadDeath(){
-                let deathnumber = getRandomInt(0,ways_to_die.length-1);
-
+                let deaths = [];
+                if (localStorage.deaths) {
+                    deaths = JSON.parse(localStorage.deaths);
+                }
+                if (deaths.length == ways_to_die.length) {
+                    deaths = [];
+                }
+                let deathnumber = getRandomInt(0,ways_to_die.length);
+                while (deaths.includes(deathnumber)) {
+                    deathnumber = getRandomInt(0,ways_to_die.length);
+                }
+                deaths.push(deathnumber);
+                localStorage.deaths = JSON.stringify(deaths);
                 document.getElementById("methodofdeath").innerHTML = ways_to_die[deathnumber];
             }
         </script>
