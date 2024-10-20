@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script>
+            const ways_to_die = [
+                'You will die of embarrassment after accidentally calling your boss, “Mom.”',
+                'Simply trying to reach for a piece of cheese, which you’ll discover is attached to a string that pulls open a cage, sending a bowling ball down a flight of stairs, turning on a hair dryer, which melts a block of ice that fills a bathtub, raising a stopper that turns on a cuckoo clock, triggering a boot on a mechanical spring that kicks your head off.  Everyone will politely applaud.',
+                'While listening to the forbidden remix of the “Cha-Cha Slide”, right after the singer tells you to “Slide to the left”, and “Slide to the right”, a new voice - a deep, quiet voice full of malice - will whisper, “Now burst into flames.”  You won’t want to obey, but you’ll know that you must.  THe dance demands it.  And everyone at the bar mitzvah is watching.',
+                'You will successfully fly toward the heavens with wings made of ham, but your temptation to eat your delicious ham wings will become all too great.',
+                'You will fall into the deep fryer at the county fair, dying instantly.  Your death will be declared a “finger-lickin’ preventable tragedy.”',
+                'A freak accident at a construction site will trap you inside a giant glass box.  Your panicked screams will be inaudible as you pound on the sides, running out of oxygen.  Onlookers, mistaking you for a mime, will applaud and toss your quarters.  You will earn $2.75',
+                'The person of your dreams will finally propose to you!  You gasp so hard that you inhale the ring and die on the spot.',
+                'You will meet your tragic death imitating the playful stunts you see on a TV-Y7-rated cartoon show.  Devastated, a network censor will punch a wall and fall to their knees, sobbing.  They should have done more!',
+                'You will be bitten by a French vampire named Vampierre.  You will live for 1,000 years, sucking red wine out of bottles, until you die from exposure to a bath.',
+                'Your subscription to Poison-of-the-Month Club will prove all too satisfactory.',
+                'You will kiss your parallel self from another dimension, causing you both to blink out of existence.  Your friends, who thought this whole relationship was pretty gross, will be glad they don’t have to pretend to support this anymore.',
+                'Good news:  You finally get the world’s biggest trampoline.  Bad news: You bounce directly into the icy void of space, where your frozen corpse will forever orbit Earth, a testament to the hubris of man.',
+                'Oops!  At the sugary cereal factory, you will accidentally pull the lever that releases all the berries.  Your final words as you are crushed to death will be, “This is BERRY painful!”',
+                'You’ll finally wear that whimsical flower hat you’ve been eyeing all summer.  You’ll be devoured by hummingbirds.',
+                'On a dating app you’ll accidentally match with a wrecking ball',
+                'Eaten by thousands of rats, which you brought into your home to celebrate “Rat Day.”  You will learn, too late, that there is no such thing as “Rat Day.”',
+                'Shockingly assassinated while simply trying to ride in your motorcade through Dallas with the roof down in the year 1963.',
+                'Murdered by one of the twelve distinguished yet mysterious guests whom you invited to your cliff-side manor for a night of revelry and charades',
+                'Making history(as the first person to choke to death on air)',
+                'Steamroller accident (you have a fatal allergic reaction to pudding while driving a steamroller)',
+                'You die peacefully in your sleep at the ripe age of 102 surrounded by loved ones.  (By the way if you got this one YOU CHEATED!!!!!!)',
+                'The skeleton with a sword, he found you.  😀',
+                'Microplastics, you ate a doll house.'
+            ];
+        
+            function getRandomInt(min, max) {
+                const minCeiled = Math.ceil(min);
+                const maxFloored = Math.floor(max);
+                return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+            }
+        
+
+            function loadDeath(){
+                let deathnumber = getRandomInt(0,ways_to_die.length-1);
+
+                document.getElementById("methodofdeath").innerHTML = ways_to_die[deathnumber];
+            }
+        </script>
+    </head>
+    <body onload="loadDeath()">
+        <h1>How You Will Die!  (None Are Peaceful)</h1>
+
+        <p id="methodofdeath"></p>
+    </body>
+</html>
